@@ -17,3 +17,10 @@ jobs:
 
     - name: Build
       run: cmake --build build --config Release
+
+    - name: Upload compiled binary
+      uses: actions/upload-artifact@v3
+      with:
+        name: compiled-build
+        path: |
+          build/Release/
